@@ -10,7 +10,6 @@
  * @subpackage UnitTests
  * @author     Jan Schneider <jan@pardus.de>
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
- * @link       http://pear.horde.org/index.php?package=Release
  */
 
 /**
@@ -21,7 +20,6 @@
  * @subpackage UnitTests
  * @author     Jan Schneider <jan@pardus.de>
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
- * @link       http://pear.horde.org/index.php?package=Release
  */
 class Horde_Release_Unit_Release_WebsiteTest extends Horde_Release_TestCase
 {
