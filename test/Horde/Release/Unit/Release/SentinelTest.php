@@ -32,6 +32,27 @@ extends Horde_Release_TestCase
     {
         $tmp_dir = $this->getTemporaryDirectory();
         $sentinel = new Horde_Release_Sentinel($tmp_dir);
+        mkdir($tmp_dir . '/doc');
+        file_put_contents($tmp_dir . '/doc/CHANGES', "\n=OLD=\n");
+        $sentinel->updateChanges('1.0.0');
+        $this->assertEquals(
+            '------
+v1.0.0
+------
+
+
+
+
+=OLD=
+',
+            file_get_contents($tmp_dir . '/doc/CHANGES')
+        );
+    }
+
+    public function testUpdateSentinelWithHorde5()
+    {
+        $tmp_dir = $this->getTemporaryDirectory();
+        $sentinel = new Horde_Release_Sentinel($tmp_dir);
         mkdir($tmp_dir . '/docs');
         file_put_contents($tmp_dir . '/docs/CHANGES', "\n=OLD=\n");
         $sentinel->updateChanges('1.0.0');
@@ -50,6 +71,22 @@ v1.0.0
     }
 
     public function testReplaceSentinel()
+    {
+        $tmp_dir = $this->getTemporaryDirectory();
+        $sentinel = new Horde_Release_Sentinel($tmp_dir);
+        mkdir($tmp_dir . '/doc');
+        file_put_contents($tmp_dir . '/doc/CHANGES', "---\nOLD\n---\nTEST");
+        $sentinel->replaceChanges('1.0.0');
+        $this->assertEquals(
+            '------
+v1.0.0
+------
+TEST',
+            file_get_contents($tmp_dir . '/doc/CHANGES')
+        );
+    }
+
+    public function testReplaceSentinelWithHorde5()
     {
         $tmp_dir = $this->getTemporaryDirectory();
         $sentinel = new Horde_Release_Sentinel($tmp_dir);

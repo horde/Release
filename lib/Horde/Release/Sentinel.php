@@ -32,7 +32,10 @@
 class Horde_Release_Sentinel
 {
     /** Path to the CHANGES file. */
-    const CHANGES = '/docs/CHANGES';
+    const CHANGES = '/doc/CHANGES';
+
+    /** Path to the CHANGES file up to Horde 5. */
+    const CHANGES_H5 = '/docs/CHANGES';
 
     /** Path to the Application.php file. */
     const APPLICATION = '/lib/Application.php';
@@ -184,9 +187,11 @@ class Horde_Release_Sentinel
      */
     public function changesFileExists()
     {
-        $changes = $this->_component . self::CHANGES;
-        if (file_exists($changes)) {
-            return $changes;
+        foreach (array(self::CHANGES, self::CHANGES_H5) as $path) {
+            $changes = $this->_component . $path;
+            if (file_exists($changes)) {
+                return $changes;
+            }
         }
         return false;
     }

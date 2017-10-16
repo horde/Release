@@ -36,6 +36,37 @@ extends Horde_Release_TestCase
                 array('oldversion' => '0.9', 'version' => '1.0',)
             )
         );
+        mkdir($tmp_dir . '/doc');
+        file_put_contents($tmp_dir . '/doc/CHANGES', "\n=OLD=\n");
+
+        $r->setVersionStrings();
+        $r->setDirectoryName($tmp_dir);
+        ob_start();
+        $r->updateSentinel();
+        ob_end_clean();
+
+        $this->assertEquals(
+            '----------
+v1.0.1-cvs
+----------
+
+
+
+
+=OLD=
+',
+            file_get_contents($tmp_dir . '/doc/CHANGES')
+        );
+    }
+
+    public function testUpdateSentinelWithHorde5()
+    {
+        $tmp_dir = $this->getTemporaryDirectory();
+        $r = $this->_getReleaseHelper(
+            $this->_getOptions(
+                array('oldversion' => '0.9', 'version' => '1.0',)
+            )
+        );
         mkdir($tmp_dir . '/docs');
         file_put_contents($tmp_dir . '/docs/CHANGES', "\n=OLD=\n");
 

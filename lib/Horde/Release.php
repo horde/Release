@@ -61,7 +61,7 @@ class Horde_Release
     protected $_newSourceVersionString;
 
     /**
-     * Version number of next release for docs/CHANGES.
+     * Version number of next release for doc/CHANGES.
      *
      * @var string
      */
