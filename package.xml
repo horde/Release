@@ -10,7 +10,7 @@
   <email>jan@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-20</date>
+ <date>2017-10-27</date>
  <version>
   <release>3.0.3</release>
   <api>3.0.0</api>
@@ -24,6 +24,13 @@
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
+   <dir name="doc">
+    <dir name="Horde">
+     <dir name="Release">
+      <file name="CHANGES" role="doc" />
+     </dir> <!-- /doc/Horde/Release -->
+    </dir> <!-- /doc/Horde -->
+   </dir> <!-- /doc -->
    <dir name="lib">
     <dir name="Horde">
      <dir name="Release">
@@ -131,6 +138,7 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="CHANGES" name="doc/Horde/Release/CHANGES" />
    <install as="Horde/Release.php" name="lib/Horde/Release.php" />
    <install as="Horde/Release/MailingList.php" name="lib/Horde/Release/MailingList.php" />
    <install as="Horde/Release/Sentinel.php" name="lib/Horde/Release/Sentinel.php" />
@@ -316,7 +324,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-20</date>
+   <date>2017-10-27</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
    </notes>
