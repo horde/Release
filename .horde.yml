@@ -5,3 +5,34 @@ full: Component release library
 description: Tools necessary to create the Horde distribution packages.
 list: dev
 type: library
+homepage: https://www.horde.org/libraries/Horde_Release
+authors:
+  -
+    name: Jan Schneider
+    user: jan
+    email: jan@horde.org
+    active: true
+    role: lead
+version:
+  release: 3.0.3
+  api: 3.0.0
+state:
+  release: stable
+  api: stable
+license:
+  identifier: LGPL-2.1
+  uri: http://www.horde.org/licenses/lgpl21
+dependencies:
+  required:
+    php: ^5.3 || ^7
+    pear:
+      pear.horde.org/Horde_Exception: ^2
+      pear.horde.org/Horde_Http: ^2
+      pear.horde.org/Horde_Mail: ^2
+      pear.horde.org/Horde_Mime: ^2
+      pear.horde.org/Horde_Rpc: ^2
+      pear.horde.org/Horde_Serialize: ^2
+      pear.horde.org/Horde_Util: ^2
+  optional:
+    pear:
+      pear.horde.org/Horde_Test: ^2.1
