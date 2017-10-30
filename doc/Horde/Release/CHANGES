@@ -1,0 +1,89 @@
+----------
+v3.0.3-git
+----------
+
+
+------
+v3.0.2
+------
+
+[jan] Mark PHP 7 as supported.
+
+
+------
+v3.0.1
+------
+
+[jan] Fix issues with certain locales like Turkish.
+
+
+------
+v3.0.0
+------
+
+[jan] Remove Freecode support.
+
+
+------
+v2.0.3
+------
+
+[jan] Add release task to update website version.
+
+
+------
+v2.0.2
+------
+
+[jan] Use HTTPS URLs for Freecode submissions.
+
+
+------
+v2.0.1
+------
+
+[jan] Fix detecting stable releases.
+
+
+------
+v2.0.0
+------
+
+First stable release for Horde 5.
+
+
+-----------
+v2.0.0beta1
+-----------
+
+First beta release for Horde 5.
+
+
+------------
+v2.0.0alpha1
+------------
+
+First alpha release for Horde 5.
+
+
+------
+v1.0.0
+------
+
+[jan] Remove reference to mirrors.
+[jan] Fix CVS releases from arbitrary branches/tags.
+
+
+---------
+v1.0.0RC1
+---------
+
+[jan] Rename Freshmeat to Freenode.
+
+
+------------
+v1.0.0alpha1
+------------
+
+First alpha release for Horde 4.
+[jan] Keep file mode of Application.php (Bug #9697).
