@@ -11,8 +11,8 @@
             "role": "lead"
         }
     ],
-    "version": "3.0.4",
-    "time": "2020-03-12",
+    "version": "4.0.0",
+    "time": "2020-03-19",
     "repositories": [
         {
             "type": "pear",
@@ -33,8 +33,8 @@
         "pear-pear.horde.org/Horde_Test": "^2.1"
     },
     "replace": {
-        "pear-pear.horde.org/Horde_Release": "3.*",
-        "pear-horde/Horde_Release": "3.*"
+        "pear-pear.horde.org/Horde_Release": "4.*",
+        "pear-horde/Horde_Release": "4.*"
     },
     "autoload": {
         "psr-0": {
