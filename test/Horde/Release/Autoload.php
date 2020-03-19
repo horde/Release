@@ -13,6 +13,3 @@
 
 /** Load the basic test definition */
 require_once __DIR__ . '/TestCase.php';
-
-/** Load stub definitions */
-require_once __DIR__ . '/Stub/Release.php';
