@@ -10,7 +10,7 @@
   <email>jan@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2020-03-19</date>
+ <date>2020-03-20</date>
  <version>
   <release>4.0.0</release>
   <api>4.0.0</api>
@@ -45,9 +45,6 @@
    <dir name="test">
     <dir name="Horde">
      <dir name="Release">
-      <dir name="Stub">
-       <file name="Release.php" role="test" />
-      </dir> <!-- /test/Horde/Release/Stub -->
       <dir name="Unit">
        <dir name="Release">
         <file name="SentinelTest.php" role="test" />
@@ -146,7 +143,6 @@
    <install as="Horde/Release/AllTests.php" name="test/Horde/Release/AllTests.php" />
    <install as="Horde/Release/Autoload.php" name="test/Horde/Release/Autoload.php" />
    <install as="Horde/Release/bootstrap.php" name="test/Horde/Release/bootstrap.php" />
-   <install as="Horde/Release/Stub/Release.php" name="test/Horde/Release/Stub/Release.php" />
    <install as="Horde/Release/TestCase.php" name="test/Horde/Release/TestCase.php" />
    <install as="Horde/Release/Unit/Release/SentinelTest.php" name="test/Horde/Release/Unit/Release/SentinelTest.php" />
    <install as="Horde/Release/Unit/Release/WebsiteTest.php" name="test/Horde/Release/Unit/Release/WebsiteTest.php" />
@@ -373,7 +369,7 @@
     <release>stable</release>
     <api>stable</api>
    </stability>
-   <date>2020-03-19</date>
+   <date>2020-03-20</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
