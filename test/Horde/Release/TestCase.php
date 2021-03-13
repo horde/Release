@@ -11,6 +11,9 @@
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
 Cli
  */
+namespace Horde\Release;
+use Horde_Test_Case;
+use \Horde_Util;
 
 /**
  * Basic test case.
@@ -26,8 +29,7 @@ Cli
  * @author     Gunnar Wrobel <wrobel@pardus.de>
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
  */
-class Horde_Release_TestCase
-extends Horde_Test_Case
+class TestCase extends Horde_Test_Case
 {
     protected function getTemporaryDirectory()
     {

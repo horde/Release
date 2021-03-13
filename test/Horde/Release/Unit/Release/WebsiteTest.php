@@ -11,6 +11,11 @@
  * @author     Jan Schneider <jan@pardus.de>
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
  */
+namespace Horde\Release\Unit\Release;
+use Horde\Release\TestCase;
+use \PDO;
+use \Horde_Release_Website;
+use \DateTime;
 
 /**
  * Test the website udpate.
@@ -21,9 +26,9 @@
  * @author     Jan Schneider <jan@pardus.de>
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
  */
-class Horde_Release_Unit_Release_WebsiteTest extends Horde_Release_TestCase
+class WebsiteTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->db = new PDO('sqlite::memory:');
         $this->db->query('CREATE TABLE versions (application VARCHAR(255), state VARCHAR(255), version VARCHAR(255), date VARCHAR(10), pear BOOLEAN, dir VARCHAR(255), PRIMARY KEY (application, state))');
@@ -34,6 +39,7 @@ class Horde_Release_Unit_Release_WebsiteTest extends Horde_Release_TestCase
      */
     public function testFailWithMissingApplication()
     {
+        $this->expectException('LogicException');
         $this->_createObject()->addNewVersion(array(
             'version' => '1.0.1'
         ));
@@ -44,6 +50,7 @@ class Horde_Release_Unit_Release_WebsiteTest extends Horde_Release_TestCase
      */
     public function testFailWithMissingVersion()
     {
+        $this->expectException('LogicException');
         $this->_createObject()->addNewVersion(array(
             'application' => 'horde',
         ));
@@ -54,6 +61,7 @@ class Horde_Release_Unit_Release_WebsiteTest extends Horde_Release_TestCase
      */
     public function testFailWithIncorrectState()
     {
+        $this->expectException('LogicException');
         $this->_createObject()->addNewVersion(array(
             'application' => 'horde',
             'state' => 'foo',

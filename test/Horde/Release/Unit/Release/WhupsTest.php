@@ -10,6 +10,12 @@
  * @author     Gunnar Wrobel <wrobel@pardus.de>
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
  */
+namespace Horde\Release\Unit\Release;
+use Horde\Release\TestCase;
+use \stdClass;
+use \Horde_Release_Whups;
+use \Horde_Http_Request_Mock;
+use \Horde_Http_Client;
 
 /**
  * Test the whups accessor.
@@ -25,16 +31,15 @@
  * @author     Gunnar Wrobel <wrobel@pardus.de>
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
  */
-class Horde_Release_Unit_Release_WhupsTest
-extends Horde_Release_TestCase
+class WhupsTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         // Horde_Rpc is not E_STRICT clean
         $this->old_errorreporting = error_reporting(E_ALL & ~E_STRICT);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         error_reporting($this->old_errorreporting);
     }
@@ -55,11 +60,9 @@ extends Horde_Release_TestCase
         $this->assertFalse($whups->getQueueId('missing'));
     }
 
-    /**
-     * @expectedException Horde_Exception
-     */
     public function testAddNewVersionOnMissingQueue()
     {
+        $this->expectException('Horde_Exception');
         $response = new stdClass;
         $response->result = array('kronolith', 'horde');
         $whups = $this->_createWhups($response);
