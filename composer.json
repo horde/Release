@@ -4,7 +4,7 @@
     "description": "Component release library",
     "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Release",
-    "license": "LGPL-2.1",
+    "license": "LGPL-2.1-only",
     "authors": [
         {
             "name": "Jan Schneider",
@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "^7",
+        "php": "^7.4 || ^8",
         "horde/exception": "^3 || dev-FRAMEWORK_6_0",
         "horde/http": "^3 || dev-FRAMEWORK_6_0",
         "horde/mail": "^3 || dev-FRAMEWORK_6_0",
