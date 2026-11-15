@@ -7,14 +7,13 @@ list: dev
 type: library
 homepage: https://www.horde.org/libraries/Horde_Release
 authors:
-  -
-    name: Jan Schneider
+  - name: Jan Schneider
     user: jan
     email: jan@horde.org
     active: true
     role: lead
 version:
-  release: 4.0.0alpha5
+  release: 4.1.0-alpha
   api: 4.0.0alpha1
 state:
   release: alpha
@@ -36,3 +35,4 @@ dependencies:
   optional:
     composer:
       horde/test: ^3
+vendor: horde
